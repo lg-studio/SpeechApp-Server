@@ -1,0 +1,33 @@
+{
+    "name": "Server",
+    "version": "0.0.0",
+    "description": "Server",
+    "main": "App.js",
+    "author": {
+        "name": "CatalinAndrei",
+        "email": ""
+    },
+    "scripts": {
+        "start": "node App.js Heroku"
+    },
+    "dependencies": {
+        "mongoose": "^4.1.3",
+        "async": "^1.4.0",
+        "bcrypt-nodejs": "0.0.3",
+        "emailjs": "^0.3.16",
+        "express": "3.4.4",
+        "express-session": "^1.11.3",
+        "log4js": "^0.6.26",
+        "mocha": "^2.2.5",
+        "mongodb": "^2.0.36",
+        "multer": "^1.0.1",
+        "newrelic": "^1.21.2",
+        "oauth": "^0.9.13",
+        "q": "^1.4.1",
+        "request-json": "^0.5.3",
+        "underscore": "^1.8.3"
+    },
+  "engines": {
+    "node": "0.12.2"
+  }
+}

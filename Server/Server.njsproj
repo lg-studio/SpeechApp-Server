@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Server</Name>
+    <RootNamespace>Server</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>409e4ca9-c55f-4088-9589-7a0d527bca31</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>App.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Html\AccountActivatedPage.html" />
+    <Content Include="Html\AccountActivationTemplate.html" />
+    <Content Include="Html\PasswordRecoveryTemplate.html" />
+    <Content Include="Logs\Log.log" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="Resources\Images\default.jpg" />
+    <Content Include="Resources\iOS\cert.pem" />
+    <Content Include="Resources\iOS\key.pem" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libs\" />
+    <Folder Include="Logs\" />
+    <Folder Include="Config\" />
+    <Folder Include="Html\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\iOS\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Scripts\Compiler\" />
+    <Folder Include="Scripts\Compiler\Models\" />
+    <Folder Include="Scripts\Compiler\NodeItemPropertiesCompilers\" />
+    <Folder Include="Scripts\Controllers\LoginStrategies\" />
+    <Folder Include="Scripts\DAL\" />
+    <Folder Include="Scripts\Models\TaskInput\" />
+    <Folder Include="Scripts\Tree\" />
+    <Folder Include="Scripts\Services\" />
+    <Folder Include="Scripts\States\" />
+    <Folder Include="Scripts\States\Answer\" />
+    <Folder Include="Scripts\States\Task\" />
+    <Folder Include="Scripts\States\Rating\" />
+    <Folder Include="Scripts\Tree\NodeHandlingStategies\" />
+    <Folder Include="Scripts\Utils\" />
+    <Folder Include="test\" />
+    <Folder Include="Public\" />
+    <Folder Include="Public\Images\" />
+    <Folder Include="Public\JavaScript\" />
+    <Folder Include="Public\StyleSheets\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\Builders\Mobile\" />
+    <Folder Include="Scripts\Builders\CMS\" />
+    <Folder Include="Scripts\Core\" />
+    <Folder Include="Scripts\Models\" />
+    <Folder Include="Scripts\Controllers\" />
+    <Folder Include="Scripts\Builders\" />
+    <Folder Include="Scripts\Routes\" />
+    <Folder Include="test\Utils\" />
+    <Folder Include="test\TreeWalkTest\" />
+    <Folder Include="test\TreeWalkTest\DemoData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.js" />
+    <Compile Include="Config.js" />
+    <Compile Include="Config\EnvironmentConfig.heroku.js" />
+    <Compile Include="Config\Config.global.js" />
+    <Compile Include="Config\EnvironmentConfig.development.js" />
+    <Compile Include="newrelic.js" />
+    <Compile Include="Scripts\Builders\Mobile\ContextualOutputPlaceholderJsonBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\MetricThumbsPropertiesBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\MetricPropertiesBuilderFactory.js" />
+    <Compile Include="Scripts\Builders\Mobile\PropertiesBuilderFactory.js" />
+    <Compile Include="Scripts\Builders\Mobile\NodeItemPropertiesBuilderFactory.js" />
+    <Compile Include="Scripts\Builders\Mobile\MetricSliderPropertiesBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\TextPromptPropertiesBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\AudioPromptPropertiesBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\RatingInputPropertiesBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\RecordingInputPropertiesBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\OutputPropertiesJsonBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\InputPropertiesJsonBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\NodeItemBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\ContextualOutputPropertiesJsonBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\NodeJsonBuilderMobile.js" />
+    <Compile Include="Scripts\Builders\Mobile\TaskJsonBuilderMobile.js" />
+    <Compile Include="Scripts\Compiler\DynamicContentCompiler.js" />
+    <Compile Include="Scripts\Compiler\DynamicContentEntryCompiler.js" />
+    <Compile Include="Scripts\Compiler\Models\CompileContext.js" />
+    <Compile Include="Scripts\Compiler\Models\RecordingCollectionCompileContext.js" />
+    <Compile Include="Scripts\Compiler\Models\RecordingCompileContext.js" />
+    <Compile Include="Scripts\Compiler\Models\UserCompileContext.js" />
+    <Compile Include="Scripts\Compiler\NodeItemPropertiesCompilers\AudioPromptPropertiesCompiler.js" />
+    <Compile Include="Scripts\Compiler\NodeItemPropertiesCompilers\MetricPropertiesCompiler.js" />
+    <Compile Include="Scripts\Compiler\NodeItemPropertiesCompilers\TextPromptPropertiesCompiler.js" />
+    <Compile Include="Scripts\Compiler\RecordingEntryDynamicContentResolver.js" />
+    <Compile Include="Scripts\Compiler\UserEntryDynamicContentResolver.js" />
+    <Compile Include="Scripts\Controllers\LoginStrategies\BasicLoginStrategy.js" />
+    <Compile Include="Scripts\Controllers\LoginStrategies\FacebookLoginStrategy.js" />
+    <Compile Include="Scripts\Controllers\LoginStrategies\GoogleLoginStrategy.js" />
+    <Compile Include="Scripts\Controllers\LoginStrategies\LoginStrategyFactory.js" />
+    <Compile Include="Scripts\Controllers\LoginStrategies\TwitterLoginStrategy.js" />
+    <Compile Include="Scripts\Controllers\MediaController.js" />
+    <Compile Include="Scripts\Controllers\UserProfileController.js" />
+    <Compile Include="Scripts\Controllers\UserController.js" />
+    <Compile Include="Scripts\Controllers\TaskInputController.js" />
+    <Compile Include="Scripts\Controllers\TaskController.js" />
+    <Compile Include="Scripts\Controllers\TaskTemplateController.js" />
+    <Compile Include="Scripts\Core\ApplicationContext.js" />
+    <Compile Include="Scripts\Core\Enums.js" />
+    <Compile Include="Scripts\DAL\Topic.js" />
+    <Compile Include="Scripts\DAL\TreeStructure.js" />
+    <Compile Include="Scripts\DAL\TreeNode.js" />
+    <Compile Include="Scripts\DAL\Competence.js" />
+    <Compile Include="Scripts\DAL\ActivationToken.js" />
+    <Compile Include="Scripts\DAL\Rating.js" />
+    <Compile Include="Scripts\DAL\Answer.js" />
+    <Compile Include="Scripts\DAL\Recording.js" />
+    <Compile Include="Scripts\DAL\Resource.js" />
+    <Compile Include="Scripts\DAL\User.js" />
+    <Compile Include="Scripts\DAL\Task.js" />
+    <Compile Include="Scripts\DAL\TaskTemplate.js" />
+    <Compile Include="Scripts\Models\TaskInput\TaskInput.js" />
+    <Compile Include="Scripts\Routes\Routes.js" />
+    <Compile Include="Scripts\Services\ActivateAccountService.js" />
+    <Compile Include="Scripts\Services\EmailService.js" />
+    <Compile Include="Scripts\Services\ResetPasswordService.js" />
+    <Compile Include="Scripts\States\Answer\AnswerStates.js" />
+    <Compile Include="Scripts\States\Rating\RatingStates.js" />
+    <Compile Include="Scripts\States\Task\TaskStates.js" />
+    <Compile Include="Scripts\Tree\NodeHandlingStategies\CompetenceNodeHandlingStrategies.js" />
+    <Compile Include="Scripts\Utils\MongooseInitializer.js" />
+    <Compile Include="test\TreeWalkTest\DemoData\Competence.js" />
+    <Compile Include="test\Utils\DemoDataImporter.js" />
+    <Compile Include="test\TreeWalkTest\DemoData\Task.js" />
+    <Compile Include="test\TreeWalkTest\DemoData\TreeNode.js" />
+    <Compile Include="test\TreeWalkTest\DemoData\TreeStructure.js" />
+    <Compile Include="test\TreeWalkTest\DemoData\User.js" />
+    <Compile Include="test\TreeWalkTest\TreeWalkTest.js" />
+    <Compile Include="test\StateMachineTest.js" />
+    <Compile Include="test\NodeItemCompileTest.js" />
+    <Compile Include="test\DynamicContentTest.js" />
+    <Compile Include="Scripts\Utils\MobileResponseWrapper.js" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
